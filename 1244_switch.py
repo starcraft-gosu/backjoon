@@ -8,7 +8,7 @@ student = [list(map(int, input().split()))for _ in range(M)]
 for x in student:
     if x[0] == 1:
         # len(switch)보다 작은 x[1]의 배수
-        for i in range(1, len(switch)):
+        for i in range(1, len(switch)+1):
             if x[1] * i <= len(switch):
                 switch[x[1] * i - 1] = int(not switch[x[1] * i - 1])
     else:               # 여자
