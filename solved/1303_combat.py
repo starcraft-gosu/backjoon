@@ -12,7 +12,7 @@ from collections import deque
 dxy = [(-1, 0), (0, -1), (1, 0), (0, 1)]
 
 N, M = map(int, input().split())
-combat = list(input() for _ in range(N) )
+combat = list(input() for _ in range(M) )
 
 visited = [[0] * N for _ in range(M)]
 q = deque()             # 큐 생성
