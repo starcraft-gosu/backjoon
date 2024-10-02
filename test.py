@@ -1,9 +1,5 @@
-def sd(a):
-    if a == 1:
-        return 1, 2
-    else:
-        return 4
+from collections import deque
+help(deque)
 
-a, b = sd(1)
-
-print(a, b)
+a = deque(((1, 2)))
+print(type(a), a)
