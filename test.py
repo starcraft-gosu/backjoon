@@ -1,5 +1,3 @@
-from collections import deque
-help(deque)
-
-a = deque(((1, 2)))
-print(type(a), a)
+a = 'asdf'
+for i in range(-1, -(len(a)+1)):
+    print(i)
