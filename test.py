@@ -1,6 +1,14 @@
-addr_pieces = [1, 2, 3, 4, 5]
+import random
+file = 'input.txt'
 
-for addr_piece in addr_pieces:
-    addr_piece = 2 + addr_piece
-    print(addr_piece)
-print(addr_pieces)
+N, M = 100000, 100000
+
+with open(file, 'w') as f:
+    f.write(f'{N}\n')
+    for _ in range(N):
+        a = random.randint(-2^31, 2^31)
+        f.write(f'{a} ')
+    f.write(M)
+    for _ in range(M):
+        b = random.randint(-2^31, 2^31)
+        f.write(f'{b} ')

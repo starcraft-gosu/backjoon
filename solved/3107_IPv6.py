@@ -1,4 +1,4 @@
-
+# while 1:
 addr = str(input())
 # print(addr)
 
@@ -18,8 +18,13 @@ if '::' in addr:
         new_addr += '0000:'
     if addr.startswith('::'):   # ::이 맨 앞에 있을때
         new_addr = '0000' + new_addr
+        if diff < 0:  # 콜론이 8개일때
+            new_addr = '0000:'
     elif addr.endswith('::'):   # ::이 맨 뒤에 있을때
         new_addr = new_addr + '0000'
+        if diff < 0:  # 콜론이 8개일때
+            new_addr = ':0000'
+
     # else:       # ::이 가운데 있을때
     #     new_addr += ':' + new_addr + ':'
     # print(new_addr)
