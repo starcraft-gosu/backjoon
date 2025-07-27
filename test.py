@@ -1,5 +1,16 @@
-lines = [[2, 4, 6, 7, 9], [2, 4, 6, 7, 8, 9], [0, 1, 7], [4, 6, 7, 8, 9], [0, 1, 3, 6, 7, 9], [6, 7, 8, 9], [0, 1, 3, 4, 5, 7, 9], [0, 1, 2, 3, 4, 5, 6], [1, 3, 5, 9], [0, 1, 3, 4, 5, 6, 8]]
+import sys
 
-print(max(enumerate(lines), key=lambda item: len(item[1])))
-max_meet_cable = max(enumerate(lines), key=lambda item: len(item[1]))[0]
-print(max_meet_cable)
+def fibonacci_top_down(n):
+    if memo[n] > 0:
+        return memo[n]
+    if n <= 1:
+        memo[n] = n
+        return memo[n]
+    else:
+        memo[n] = fibonacci_top_down(n-1) + fibonacci_top_down(n-2)
+        return memo[n]
+
+if __name__ == '__main__':
+    memo = [0 for i in range (100)]
+    n = int(sys.stdin.readline())
+    print(fibonacci_top_down(n))
