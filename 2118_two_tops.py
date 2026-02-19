@@ -1,4 +1,3 @@
-
 import sys
 from collections import deque
 input = sys.stdin.readline
@@ -7,7 +6,6 @@ N = int(input())
 spots = list(int(input()) for _ in range(N))
 # print(spots)
 distances = []
-
 
 
 def estimate(N, spots):
